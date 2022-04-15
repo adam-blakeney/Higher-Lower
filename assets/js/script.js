@@ -1,63 +1,19 @@
-// game start auto/
-// button higher/
-// button lower/
-// random numner/
-// check answer/
+// this selects randon number and displays it/
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     let buttons = document.getElementsByTagName("button");
+let theNum = Math.floor(Math.random() * 50) + 1;
+document.getElementById("numberQ").innerHTML = theNum;
 
-    
-//     runGame(1);
-// }
-            
 
-function runGame() {
-
-    document.getElementById("number-display").value = "theNum";
-    
-}
-
-function randomNum() {
-   let theNum = Math.floor(Math.random() * 100 + 1);
-   let theNext = Math.floor(Math.random() * 100 + 1);
+function runGame(gameType){
   
+    if (gameType === "higher") {
+        displayQuestion(theNum1);
+    } else {
+        alert(`Unknown game type: ${gameType}`);
+    }
+    }
+
+
+function displayQuestion(numberQ){
+document.getElementById(numberQ).innerHTML = theNum;
 }
-
-
-function gameGo(theNum){
-
-}
-
-
-// // 
-
-//   function checkAnswer() {
-
-//     let userAnswer = parseInt(document.getElementById("number-box").value);
-//     let calculatedAnswer = calculateCorrectAnswer();
-//     let isCorrect = userAnswer === calculatedAnswer[0];
-
-//     if (isCorrect) {
-//         alert("Hey! You got it right! :D");
-//         incrementScore();
-//     } else {
-//         alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
-//         incrementWrongAnswer();
-//     }
-
-
-// /**
-//  * Gets the current score from the DOM and increments it by 1
-//  */
-//  function incrementScore() {
-
-//     let oldScore = parseInt(document.getElementById("score").innerText);
-//     document.getElementById("score").innerText = ++oldScore;
-
-// }
-
-
-
-
-
