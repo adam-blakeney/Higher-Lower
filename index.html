@@ -19,17 +19,30 @@
         <i class="fa-solid fa-arrows-up-down"></i>Higher <span id="heading-2">Lower</span>
     </h1>
 
+     <!-- This displays the players and computers choice -->
+     <div class="display-block">
+        <p>You: <span id="user-choice"></span></p>
+        <p>Computer: <span id="computer-choice"></span></p>
+        
+    </div>
+
+    <!-- This tells the user if they have won or lost the turn -->
+    <div class="result-block">
+        <p>Result: <span id="result"></span></p>
+    </div>
     <div class="game-area flex-row">
        
-            <button data-type="rock" class="btn btn--big btn--green">
-                <i class="fa-solid fa-hand-back-fist"></i>
+        <div class="button-block">
+            <button class="button btn-rock" id="rock" data-type="rock">
+                <i class="fa-solid fa-hand-fist"></i>
             </button>
-            <button data-type="paper" class="btn btn--big btn--red">
+            <button class="button btn-paper" id="paper" data-type="paper">
                 <i class="fa-solid fa-hand"></i>
             </button>
-            <button data-type="scissors" class="btn btn--big btn--yellow">
+            <button class="button btn-scissors" id="scissors" data-type="scissors">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
+        </div>
            
             <!-- player and comp choice -->
     <div id="picks">
@@ -38,13 +51,16 @@
     </div>
         <h2>Result: <span id="result"></span></h2>
        <!-- score area -->
-    <div class="scores">
-        <h3>Your score:<span id="player-score"></span></h3>
-        <h3>Bots Score:<span id="comp-score"></span></h3>
+    <!-- This displays the user and computer score -->
+    <div class="win-lose-block">
+        <p>win: <span class="win">0</span></p>
+        <p>lost: <span class="lose">0</span></p>
     </div>
-     <!-- reset button -->
-     <div>
-        <button id="reset" class="btn-styling"><i class="fa-solid fa-rotate"></i></button>
+     <!-- This is the restart button -->
+     <div class="refresh-block">
+        <button class="refresh" onclick="refresh(this)" data-type="restart">
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
     </div>
  </div>        
         <script src="assets/js/script.js"></script>
