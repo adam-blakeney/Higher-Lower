@@ -16,9 +16,9 @@
 </head>
 <body>
     <h1 class="heading">
-        <i class="fa-solid fa-arrows-up-down"></i>Higher <span id="heading-2">Lower</span>
+        <i class="fa-solid fa-arrows-up-down"></i>R P S <span id="heading-2">Game</span>
     </h1>
-
+ <div class="game-area flex-row">
      <!-- This displays the players and computers choice -->
      <div class="display-block">
         <p>You: <span id="user-choice"></span></p>
@@ -30,26 +30,20 @@
     <div class="result-block">
         <p>Result: <span id="result"></span></p>
     </div>
-    <div class="game-area flex-row">
+   
        
         <div class="button-block">
-            <button class="button btn-rock" id="rock" data-type="rock">
+            <button class="button btn--big btn--green" id="rock" data-type="rock">
                 <i class="fa-solid fa-hand-fist"></i>
             </button>
-            <button class="button btn-paper" id="paper" data-type="paper">
+            <button class="button btn--big btn--red" id="paper" data-type="paper">
                 <i class="fa-solid fa-hand"></i>
             </button>
-            <button class="button btn-scissors" id="scissors" data-type="scissors">
+            <button class="button btn--big btn--yellow" id="scissors" data-type="scissors">
                 <i class="fa-solid fa-hand-scissors"></i>
             </button>
         </div>
            
-            <!-- player and comp choice -->
-    <div id="picks">
-        <h2>Your pick: <span id="player-picks"></span></h2>
-        <h2>Bots pick: <span id="comp-picks"></span></h2>
-    </div>
-        <h2>Result: <span id="result"></span></h2>
        <!-- score area -->
     <!-- This displays the user and computer score -->
     <div class="win-lose-block">
