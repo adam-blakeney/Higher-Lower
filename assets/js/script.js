@@ -48,30 +48,30 @@ function compRandomAnswer() {
  */
 function getResult() {
     if (compPicks === playerPicks) {
-        result = 'its a draw!';
+        result = 'go again...';
     } else if (compPicks === 'rock' && playerPicks === "paper") {
-        result = 'you win';
+        result = 'winner!';
         userScore++;
         playerScore.textContent = userScore;
 
     } else if (compPicks === 'rock' && playerPicks === "scissors") {
-        result = 'you lose';
+        result = 'oops..';
         machineScore++;
         compScore.textContent = machineScore;
     } else if (compPicks === 'paper' && playerPicks === "scissors") {
-        result = 'you win';
+        result = 'you won!';
         userScore++;
         playerScore.textContent = userScore;
     } else if (compPicks === 'paper' && playerPicks === "rock") {
-        result = 'you lose';
+        result = 'loser..';
         machineScore++;
         compScore.textContent = machineScore; 
     } else if (compPicks === 'scissors' && playerPicks === "rock") {
-        result = 'you win';
+        result = 'easy!';
         userScore++;
         playerScore.textContent = userScore;
     } else if (compPicks === 'scissors' && playerPicks === "paper") {
-        result = 'you lose';
+        result = 'you lose...';
         machineScore++;
         compScore.textContent = machineScore;
     }
@@ -81,7 +81,7 @@ function getResult() {
 }
 
 /**
- * function declares the winner of the match and resets the game to 0 after score reaches 6 
+ * function declares the winner and resets the game
  */
 function gameOver(getResult) {
     if (userScore === 3) {
@@ -95,7 +95,7 @@ function gameOver(getResult) {
 } 
 
 /**
- * function for reset button. refreshes page.
+  function for reset button. refreshe page.
  */
 function reStart() {
    const reStart = document.querySelector('#reset').addEventListener('click', function() {
