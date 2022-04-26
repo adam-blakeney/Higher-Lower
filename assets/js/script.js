@@ -1,17 +1,14 @@
-// this selects randon number and displays it/
-
+// this selects random number and displays it/
+public void new(){
 let theNum = Math.floor(Math.random() * 50) + 1;
 document.getElementById("numberQ").innerHTML = theNum;
+}
 
+function nextQ(){
+    let theNext = Math.floor(Math.random() * 50) + 1;
+    document.getElementById("numberQ").innerHTML = theNext;
+}
 
-function runGame(gameType){
-  
-    if (gameType === "higher") {
-        displayQuestion(theNum1);
-    } else {
-        alert(`Unknown game type: ${gameType}`);
-    }
-    }
 
 
 function displayQuestion(numberQ){
