@@ -84,11 +84,11 @@ function getResult() {
  * function declares the winner of the match and resets the game to 0 after score reaches 6 
  */
 function gameOver(getResult) {
-    if (userScore === 6) {
-        alert('player has won the match');
+    if (userScore === 3) {
+        alert('You are the Winner');
         location.reload();
-    } else if (machineScore === 6) {
-        alert('computer has won the match');
+    } else if (machineScore === 3) {
+        alert('You have lost...');
         location.reload();
     } 
     
