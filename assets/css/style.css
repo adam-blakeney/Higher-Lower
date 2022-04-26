@@ -34,58 +34,31 @@ body {
 }
 
 .scores {
-    font-family: "Lato" sans-serif;
+    font-family: "Lato", 'sans-serif';
     font-weight: 400;
     color: #669BBC;
     font-size: 1.2rem;
 }
 #picks {
-    font-family: "Lato" sans-serif;
+    font-family: "Lato", 'sans-serif';
     font-weight: 400;
     color: #780000;
     font-size: 1.2rem;
 }
-/* 
-.number-box {
-    width: 50%;
-    font-size: 2rem;
-    margin: auto;
-    padding: 50px 0;
-}
 
-.number-box span {
-    padding: 15px 15px;
-    border-radius: 10%;
-}
-
-#number-display{
-    background-color: #C1121F;
-    font-family: "Lato" sans-serif;
+#result {
+    font-family: "Lato", 'sans-serif';
     font-weight: 400;
-    color: #003049;
-    font-size: 3rem;
-}
-
-.score-area {
-    margin: 5px auto;
-    width: 60%;
+    color: #445361;
     font-size: 1.2rem;
+
 }
-
-#score{
-    display: inline-block;
-    padding: 15px;
-    color: green;
-    font-weight: bold;
-} */
-
-
 /* --------- Buttons */
 
 .btn {
     width: 220px;
     height: 60px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", 'sans-serif';
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: white;
