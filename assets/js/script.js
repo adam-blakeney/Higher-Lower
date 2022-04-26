@@ -23,7 +23,6 @@ button.forEach(button => button.addEventListener('click', function() {
     getResult();
     gameOver();
     reStart();
-    modal();
 }));
 
 /**

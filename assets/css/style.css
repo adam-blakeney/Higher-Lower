@@ -33,6 +33,19 @@ body {
     padding: 1%;
 }
 
+.scores {
+    font-family: "Lato" sans-serif;
+    font-weight: 400;
+    color: #669BBC;
+    font-size: 1.2rem;
+}
+#picks {
+    font-family: "Lato" sans-serif;
+    font-weight: 400;
+    color: #780000;
+    font-size: 1.2rem;
+}
+/* 
 .number-box {
     width: 50%;
     font-size: 2rem;
@@ -64,7 +77,7 @@ body {
     padding: 15px;
     color: green;
     font-weight: bold;
-}
+} */
 
 
 /* --------- Buttons */
@@ -134,7 +147,10 @@ body {
 }
 
 /* button reset */
-
+.flex-row {
+    flex-direction: row;
+    
+}
 .btn-styling {
     height: 6.25rem;
     width: 6.25rem;
@@ -155,3 +171,5 @@ body {
 i {
     color: #3f3f3f;
 }
+
+
