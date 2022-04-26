@@ -33,20 +33,20 @@ body {
     padding: 1%;
 }
 
-.scores {
+.win-lose-block {
     font-family: "Lato", 'sans-serif';
     font-weight: 400;
     color: #669BBC;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
-#picks {
+.display-block {
     font-family: "Lato", 'sans-serif';
     font-weight: 400;
     color: #780000;
     font-size: 1.2rem;
 }
 
-#result {
+.result-block {
     font-family: "Lato", 'sans-serif';
     font-weight: 400;
     color: #445361;
@@ -55,7 +55,7 @@ body {
 }
 /* --------- Buttons */
 
-.btn {
+.button {
     width: 220px;
     height: 60px;
     font-family: "Montserrat", 'sans-serif';
@@ -73,8 +73,8 @@ body {
     border-radius: 20%;
     background-color: white;
     border: 10px solid;
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     font-size: 3.2rem;
     margin: 0 30px;
     transition: all 0.5s;
@@ -120,11 +120,8 @@ body {
 }
 
 /* button reset */
-.flex-row {
-    flex-direction: row;
-    
-}
-.btn-styling {
+
+.refresh {
     height: 6.25rem;
     width: 6.25rem;
     border-radius: 30%;
