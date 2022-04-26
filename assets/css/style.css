@@ -122,3 +122,36 @@ body {
     background-color: darkgreen;
     color: white;
 }
+.btn--yellow {
+    border-color: yellow;
+    color: yellow;
+}
+
+.btn--yellow:active,
+.btn--yellow:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+/* button reset */
+
+.btn-styling {
+    height: 6.25rem;
+    width: 6.25rem;
+    border-radius: 30%;
+    font-size: 3rem;
+    border: 9px solid;
+    color: #3f3f3f;
+    cursor: pointer;
+    transition: 100ms;
+    
+}
+
+.btn-styling:hover {
+    transform: scale(1.2);
+
+}
+
+i {
+    color: #3f3f3f;
+}
