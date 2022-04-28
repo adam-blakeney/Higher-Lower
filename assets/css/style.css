@@ -1,4 +1,4 @@
-/* -- Page style */
+/*--main style */
 
 body {
     background-color: white;
@@ -55,15 +55,6 @@ body {
 }
 /* --------- Buttons */
 
-.button {
-    width: 220px;
-    height: 60px;
-    font-family: "Montserrat", 'sans-serif';
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: white;
-}
-
 .btn:focus {
     outline: none;
 }
@@ -75,6 +66,10 @@ body {
     border: 10px solid;
     width: 120px;
     height: 120px;
+    font-family: "Montserrat", 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: white;
     font-size: 3.2rem;
     margin: 0 30px;
     transition: all 0.5s;
