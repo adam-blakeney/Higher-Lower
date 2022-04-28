@@ -22,7 +22,6 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
    userChoiceDisplay.innerHTML = userChoice;
    generateComputerChoice();
    getResult();
-   countDown();
 }));
 
 /**

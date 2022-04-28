@@ -2,8 +2,8 @@
 
 body {
     background-color: white;
-    font-family: "Raleway", sans-serif;
-    color: #445361;
+    font-family: "Montserrat", sans-serif;
+    color: #669BBC;
     text-align: center;
 }
 
@@ -48,9 +48,9 @@ body {
 
 .result-block {
     font-family: "Lato", 'sans-serif';
-    font-weight: 400;
-    color: #445361;
-    font-size: 1.2rem;
+    font-weight: 800;
+    color: gray;
+    font-size: 1.3rem;
 
 }
 /* --------- Buttons */
@@ -85,6 +85,7 @@ body {
     font-size: 1rem;
     color: #445361;
     position: relative;
+    top: -30%;
 }
 
 .btn--red {
