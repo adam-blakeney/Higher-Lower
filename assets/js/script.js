@@ -12,9 +12,8 @@ let userscore = 0;
 let computerscore = 0;
 
 
-
 /*
-This is the main function. It puts the buttons into a array and adds an eventlistener.
+This is the main function. It puts the buttons into an array and adds an eventlistener.
 */
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', function() {
@@ -93,13 +92,13 @@ function getResult() {
 function gameOver() {
    if(userscore === 6) {
       alert('YOU ARE THE WINNER!!');
-      location.reload();
+      window.location.reload("Refresh");
    }else if(computerscore === 6) {
       alert('DEFEATED...');
-      location.reload();
+      window.location.reload("Refresh");
    }else {
       alert("ITS A DRAW..");
-      location.reload();
+      window.location.reload("Refresh");
    }
 
 }
