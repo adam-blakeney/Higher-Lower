@@ -4,22 +4,17 @@ const resultDisplay = document.querySelector('#result');
 const possibleChoices = document.querySelectorAll('.button');
 const win = document.querySelector('.win');
 const lose = document.querySelector('.lose');
-const openModal = document.querySelector('#open');
-const modalContainer = document.querySelector('#modal_container');
-const closeModal = document.querySelector('#close');
-const dark = document.querySelector('#dark');
-const element = document.body;
+
 let userChoice;
 let computerChoice;
 let result;
 let userscore = 0;
 let computerscore = 0;
-let turns = 0;
+
 
 
 /*
-This is the main function. It puts the buttons into a array and adds an eventlistener that waits for the users
-clicks and then calls upon the the other functions when programed.
+This is the main function. It puts the buttons into a array and adds an eventlistener.
 */
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', function() {
@@ -28,21 +23,11 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
    generateComputerChoice();
    getResult();
    countDown();
-   
-   
-   
-   // Calls the gameOver function after 5 turns
-   if(turns == 5) {
-      gameOver(possibleChoices, countDown);
-   }
-   
-
 }));
 
 /**
  * This generates a random number between 1 - 3 for the computer by giving 
- * them the value of Rock, Paper and Scissors. Which will then be displayed 
- * to the User.
+ * them the value of Rock, Paper or Scissors.
  */
 function generateComputerChoice() {
    const randomNumber = Math.floor(Math.random() * 3) + 1;
@@ -60,8 +45,7 @@ function generateComputerChoice() {
 }
 
 /**
- * This checkes the players choice(the buttons) with the computers choice(generateComputerChoice)
- * to determine the winer and loser. Then will increment either scores by 1.
+ * This compares the players choice with the computers choice
  */
 function getResult() {
    
@@ -70,11 +54,11 @@ function getResult() {
    }else if(userChoice === 'rock') {
       if(computerChoice === 'scissors') {
          result = 'you win';
-         userscore++; // increments user score by 1 if won
+         userscore++; // increases user score by 1
          win.innerHTML = userscore;
       }else {
          result = 'you lose';
-         computerscore++; // increments computers score by 1 if user lost
+         computerscore++; // increases computers score by 1 
          lose.innerHTML = computerscore;
       }
    }
@@ -103,53 +87,27 @@ function getResult() {
    resultDisplay.innerHTML = result;
 }
 
-/**
- * This tells the user how many turns they have left by listening for the 
- * users clicks of the buttons on the page.
- */
-function countDown() {
-   const turnsLeft = document.querySelector('.turns-left');
-   turns++; // incrementes the turns by 1
-   turnsLeft.innerHTML = 5-turns; // Displays turns left 
-}
 
 /**
- * This will check the users score and the computers score to determine the 
- * winner of the game and display it to the user.
+ * THIS CHECKS USER AND COMPUTER SCORE TO DETMINE WHEN TO END GAME AND DISPLAY MESSAGE
  */
-function gameOver(possibleChoices, countDown) {
-   if(userscore > computerscore) {
-      alert('YOU WON THE GAME!');
+function gameOver() {
+   if(userscore === 6) {
+      alert('YOU ARE THE WINNER!!');
       location.reload();
-   }else if(userscore < computerscore) {
-      alert('YOU LOST GAME!');
+   }else if(computerscore === 6) {
+      alert('DEFEATED...');
       location.reload();
    }else {
-      alert("IT'S A TIE!");
+      alert("ITS A DRAW..");
       location.reload();
    }
 
 }
 
 /**
- * This is the reload page function for the reload button at the 
- * bottom of the HTML page.
+ * This is the fuction for refresing the page and game scores..
  */
 function refresh(possibleChoices){
    window.location.reload("Refresh");
 }
-
-// Show the Modal Box when you click the RULES button
-openModal.addEventListener('click', () => {
-   modalContainer.classList.add('show');
-});
-
-// Closes the Modal Box when you click the CLOSE button inside.
-closeModal.addEventListener('click', () => {
-   modalContainer.classList.remove('show');
-});
-
-// Turns on background colour of the black when you click the DARK MODE button
-dark.addEventListener('click', () => {
-   element.classList.toggle('dark-mode');
-});
