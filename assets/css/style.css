@@ -25,7 +25,7 @@ body {
     box-sizing: border-box;
     border-radius: 10%;
     width: 85%;
-    height: 65vh;
+    height: 100%;
     max-height: 500px;
     max-width: 880px;
     margin-left: auto;
@@ -82,8 +82,8 @@ body {
 
 .btn--big::after{
     content: attr(data-type);
-    font-size: 1.5rem;
-    color: #669BBC;
+    font-size: 1rem;
+    color: #445361;
     position: relative;
 }
 
@@ -127,15 +127,20 @@ body {
     border-radius: 30%;
     font-size: 3rem;
     border: 9px solid;
-    color: #3f3f3f;
     cursor: pointer;
     transition: 100ms;
     
 }
 
-.btn-styling:hover {
-    transform: scale(1.2);
+.refresh {
+    border-color: #3f3f3f;
+    color: darkgray;
+}
 
+.refresh:active,
+.refresh:hover {
+    background-color: white;
+    color: gray;
 }
 
 i {
