@@ -49,36 +49,36 @@ function generateComputerChoice() {
 function getResult() {
    
    if (computerChoice === userChoice) {
-      result = 'Tie';
+      result = 'Its a Tie';
    }else if(userChoice === 'rock') {
       if(computerChoice === 'scissors') {
-         result = 'you win';
+         result = 'You Win';
          userscore++; // increases user score by 1
          win.innerHTML = userscore;
       }else {
-         result = 'you lose';
+         result = 'You Lose';
          computerscore++; // increases computers score by 1 
          lose.innerHTML = computerscore;
       }
    }
    else if(userChoice === 'paper') {
       if(computerChoice === 'rock') {
-         result = 'you win';
+         result = 'Winner';
          userscore++;
          win.innerHTML = userscore;
       }else{
-         result = 'you lose';
+         result = 'Loser..';
          computerscore++;
          lose.innerHTML = computerscore;
       }
    }
    else if(userChoice === 'scissors') {
       if(computerChoice === 'paper') {
-         result = 'you win';
+         result = 'You got it';
          userscore++;
          win.innerHTML = userscore;
       }else{
-         result = 'you lose';
+         result = 'lost..';
          computerscore++;
          lose.innerHTML = computerscore;
       }
@@ -91,19 +91,18 @@ function getResult() {
 /**
  * THIS CHECKS USER AND COMPUTER SCORE TO DETMINE WHEN TO END GAME AND DISPLAY MESSAGE
  */
-function gameOver() {
-   if(userscore === 6) {
-      alert('YOU ARE THE WINNER!!');
-      window.location.reload("Refresh");
-   }else if(computerscore === 6) {
-      alert('DEFEATED...');
-      window.location.reload("Refresh");
-   }else {
-      alert("ITS A DRAW..");
-      window.location.reload("Refresh");
-   }
+ function gameOver() {
+   if (userscore === 6) {
+       alert('player has won the match');
+       location.reload();
+   } else if (computerscore === 6) {
+       alert('computer has won the match');
+       location.reload();
+   } 
    console.log(alert)
-}
+} 
+   
+
 
 /**
  * This is the fuction for refresing the page and game scores..
