@@ -40,6 +40,7 @@ function generateComputerChoice() {
       computerChoice = 'scissors';
    }
    computerChoiceDisplay.innerHTML = computerChoice;
+   console.log(computerChoice);
 }
 
 /**
@@ -83,6 +84,7 @@ function getResult() {
       }
    }
    resultDisplay.innerHTML = result;
+   console.log(result);
 }
 
 
@@ -100,7 +102,7 @@ function gameOver() {
       alert("ITS A DRAW..");
       window.location.reload("Refresh");
    }
-
+   console.log(alert)
 }
 
 /**
