@@ -21,6 +21,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
    userChoiceDisplay.innerHTML = userChoice;
    generateComputerChoice();
    getResult();
+   gameOver();
 }));
 
 /**
@@ -93,13 +94,13 @@ function getResult() {
  */
  function gameOver() {
    if (userscore === 6) {
-       alert('player has won the match');
+       alert('CONGRATULATIONS YOU ARE THE WINNER');
        location.reload();
    } else if (computerscore === 6) {
-       alert('computer has won the match');
+       alert('OH NO.. YOU LOST..');
        location.reload();
    } 
-   console.log(alert)
+   console.log(alert);
 } 
    
 
@@ -107,6 +108,6 @@ function getResult() {
 /**
  * This is the fuction for refresing the page and game scores..
  */
-function refresh(possibleChoices){
+function refresh(){
    window.location.reload("Refresh");
 }
